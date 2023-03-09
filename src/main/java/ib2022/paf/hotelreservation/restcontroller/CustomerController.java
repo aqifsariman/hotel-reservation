@@ -18,7 +18,9 @@ public class CustomerController {
     CustomerService custSvc;
 
     @GetMapping
+
     public List<Customer> getAllCustomers() {
+        // custSvc is customer service
         return custSvc.retrieveAllCustomers();
     }
 }
