@@ -10,12 +10,20 @@ import ib2022.paf.hotelreservation.repository.CustomerRepository;
 
 @Service
 public class CustomerService {
-    
+
     @Autowired
     CustomerRepository customerRepo;
 
-    public List<Customer> retrieveAllCustomers(){
+    public List<Customer> retrieveAllCustomers() {
         return customerRepo.getAllCustomers();
+    }
+
+    public List<Customer> retrieveAllCustomersWithLimitOffset(int limit, int offset) {
+        return customerRepo.getAllCustomersWithLimitOffset(limit, offset);
+    }
+
+    public Customer retrieveCustomerById(int id) {
+        return customerRepo.getCustomerById(id);
     }
 
 }
